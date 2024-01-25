@@ -4,7 +4,7 @@ const footer = document.querySelector('footer');
 const copyright = document.createElement('p');
 copyright.innerHTML = `Anne Bushey ${thisYear}`;
 footer.appendChild(copyright);
-const skills = ['basic JavaScript','basic HTML','basic CSS'];
+const skills = ['JavaScript', 'HTML', 'CSS', 'Git / Github'];
 const skillsSection = document.getElementById('skills');
 const skillsList = skillsSection.querySelector('ul');
 for(let el of skills){
@@ -19,7 +19,6 @@ messageForm.addEventListener('submit', (e) => {
     const usersName = e.target.usersName.value;
     const usersEmail = e.target.usersEmail.value;
     const usersMessage = e.target.usersMessage.value;
-    //console.log(usersName, usersEmail, usersMessage);
     const messageList = messageSection.querySelector('ul');
     const newMessage = document.createElement('li');
     newMessage.innerHTML = `<span id="sender"><a href="mailto:${usersEmail}">${usersName}</a> sent: </span><span id="messagecontent">${usersMessage}</span>`
