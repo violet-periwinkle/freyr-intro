@@ -37,7 +37,9 @@ h1{
 nav{
     display: flex;
     position: sticky;
+    right: 0px;
     top: 0px;
+    width: 100%;
     background-color: var(--nav-bg-color);
 }
 nav a{
@@ -94,6 +96,9 @@ p{
     flex-basis: 0;
     text-align: center;
 }
+#connect li{
+    margin-top: 0.5rem;
+}
 #projects li:hover, #connect li:hover{
     background-color: #ffffff;
 }
@@ -114,7 +119,7 @@ input{
 label{
     display: block;
     height: fit-content;
-    font-size: 1.25rem;
+    font-size: 1.125em;
     background-color: var(--bg-second-color);
     padding: 0.25rem 0.25rem;
     border-radius: 0.25rem;
@@ -126,17 +131,6 @@ textarea{
     margin: 0.25rem 0.5rem;
     min-height: 4rem;
 }
-button{
-    background-color: var(--button-bg-color);
-    border: solid 2px var(--button-border-color);
-    border-radius: 0%;
-    margin: 0.25rem;
-    padding: 0.5rem 2rem;
-    font-weight: bold;
-}
-button:active{
-    background-color: var(--button-border-color);
-}
 form{
     display: grid;
     grid-template-columns: min-content auto;
@@ -144,8 +138,17 @@ form{
     grid-gap: 0.25rem;
 }
 form button{
+    background-color: var(--button-bg-color);
+    border: solid 2px var(--button-border-color);
+    border-radius: 0%;
+    margin: 0.25rem;
+    padding: 0.5rem 2rem;
+    font-weight: bold;
     grid-column-start: 1;
     grid-column-end: 3;
+}
+form button:active{
+    background-color: var(--button-border-color);
 }
 #messages{
     display: none;
@@ -176,9 +179,10 @@ form button{
 @media (max-width: 600px) {
     body{
         margin: 0px;
+        line-height: 120%;
     }
     h1{
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     section{
         margin: 0px 4px;
@@ -188,11 +192,16 @@ form button{
     }
     li {
         margin: auto;
-        width:fit-content;
+        width: 80%;
+        text-align: center;
     }
     nav{
         flex-wrap: nowrap;
         overflow-x: scroll;
-        font-size: large;
+        font-size: larger;
+    }
+    nav a{
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 }
